@@ -4,7 +4,11 @@
         <mat-card-content>{{product.description}}</mat-card-content>
         <mat-card-actions> 
             
-            <button mat-flat-button color="promary"></button>
+            <button mat-flat-button color="primary">
+                buy {{product.price | currency}}
+                <mat-icon>add_shopping_cart</mat-icon>
+            </button>
+            
         </mat-card-actions>
     </mat-card>
 </section>
