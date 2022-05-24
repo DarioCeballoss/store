@@ -10,13 +10,15 @@ import { Product } from './interfaces/product.interface';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  products!: Product[];  
+  products!: Product[];
   constructor(private productSvc: ProductsService) { }
 
   ngOnInit(): void {
     this.productSvc.getProducts()
-    .pipe(tap((products: Product[])=>this.products = products))
-    .subscribe();
+      .pipe(tap((products: Product[]) => this.products = products))
+      .subscribe();
   }
-
+  addToCart(product: Product): void {
+    console.log('add to cart', product);
+  }
 }
