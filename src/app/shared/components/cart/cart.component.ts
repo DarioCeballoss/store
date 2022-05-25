@@ -5,9 +5,12 @@ import { ShoppingCartService } from '../../services/shoping-card.service';
     selector: 'app-cart',
     template: `
     <ng-container *ngIf="{total: total$ | async, quantity: quantity$ | async} as dataCart">
+        {{dataCart | json}} - Test
+    <ng-container *ngIf="dataCart.total">
     <mat-icon>add_shopping_cart</mat-icon>    
     {{dataCart.total | currency}}
-    {{dataCart.quantity}}
+    ({{dataCart.quantity}})
+</ng-container>
 </ng-container>
     `
 })

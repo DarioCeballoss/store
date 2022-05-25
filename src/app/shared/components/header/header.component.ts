@@ -5,6 +5,7 @@ import { Component} from '@angular/core';
   template: `
   <mat-toolbar color="primary">
 <span> My store</span>
+<span class="spacer"></span>
 <app-cart></app-cart>
 </mat-toolbar>
 `,
